@@ -23,9 +23,11 @@ nav{
     /* used to center the nav bar */
     margin: 0 auto;
 }
-logo{
+.purple{
+    color: #7342d6;
+}
+.logo{
     width: 160px;
-    height: 60px;
 }
 ul{
     display: flex;

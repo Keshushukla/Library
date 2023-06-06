@@ -144,39 +144,32 @@ button:active{
 #highlights{
     position: relative;
 }
-#highlights::before{
-    /* changes are made before the element highlights*/
-    background: url(assets/wave.svg);
-    /* dont need text but image thats why 
-    content is imp . it needs to present even as
-    an empty string to see before or after */
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 0px;
-    transform: translateY(-100%);
-    width: 101vw;
-    height: 12vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
+#highlights::before,
 #highlights::after{
-    /* changes are made after the element highlights*/
-    background: url(assets/wave.svg);
-    content: "";
-    position: absolute;
-    bottom: 1px;
-    left: 0px;
-    transform: translateY(100%) rotate(180deg);
-    width: 101vw;
-    /* so that image can be in whole webpage
+        /* changes are made before the element highlights*/
+        background: url(assets/wave.svg);
+        /* dont need text but image thats why 
+        content is imp . it needs to present even as
+        an empty string to see before or after */
+        content: "";
+        position: absolute;
+        left: 0px;
+        width: 101vw;
+        /* so that image can be in whole webpage
     even bigger than webpage because max width of 
     webpage is 100vw */
-    height: 12vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
+        height: 12vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+}
+#highlights::before{
+    top: 1px;
+    transform: translateY(-100%);
+}
+#highlights::after{
+    bottom: 1px;
+    transform: translateY(100%) rotate(180deg);
 }
 .highlight__wrapper{
     display: flex;

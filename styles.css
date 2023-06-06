@@ -87,6 +87,7 @@ li{
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
 .menu__backdrop{
     position: absolute;
@@ -103,6 +104,19 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+/* element is hidden but when menu is opened it
+ beconmes visible */
+.menu--open .menu__backdrop{
+    visibility: visible;
+    opacity: 1;
+}
+.menu--open{
+    max-height: 100vh;
+    overflow: hidden;
 }
 .menu__links{
     display: flex;
@@ -359,4 +373,12 @@ FOOTER
 }
 .footer__link{
     padding: 0 8px;
+}
+@media (max-width: 550px){
+    .nav__links{
+        display: none;
+    }
+    .btn__menu{
+        display: block;
+    }
 }
